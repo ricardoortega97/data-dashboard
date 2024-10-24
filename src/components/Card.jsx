@@ -1,7 +1,7 @@
 import Event from "./Event";
 const Card = () => {
     return (
-        <div>
+        <>
             <Event 
             top="Stocks"
             bottom="Buy low, sell high"
@@ -14,7 +14,7 @@ const Card = () => {
                 top="Bonds"
                 bottom="Buy high, sell high" 
             />
-        </div>
+        </>
     )
 }
 
