@@ -1,10 +1,10 @@
-# Web Development Project 5 - *Stock Data Dashboard*
+# Web Development Project 5 - *Stock Data Dashboard v2*
 
 Submitted by: **Ricardo Ortega-Pacheco**
 
-This web app: **insert description**
+This web app: **Data Dashboard that displays current active stockes in the market using Polygon.io API as the request.**
 
-Time spent: **10** hours spent in total
+Time spent: **16** hours spent in total
 
 ## Required Features
 
@@ -16,6 +16,14 @@ The following **required** functionality is completed:
   - [ ] *insert details*
 - [x] **A search bar allows the user to search for an item in the fetched data**
 - [x] **Multiple different filters (2+) allow the user to filter items in the database by specified categories**
+
+New Functions
+
+- [ ] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [ ] **Clicking on an item in the list view displays more details about it**
+- [ ] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
+- [x] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording. 
 
 The following **optional** features are implemented:
 
@@ -32,13 +40,15 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 <img src='https://imgur.com/onc3anN.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+<img src='https://imgur.com/Xo233jv.gif' title='Video Walkthrough 2' width='' alt='Video Walkthrough 2' />
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
-[peek](https://github.com/phw/peek) for Linux. -->
+[peek](https://github.com/phw/peek) for Linux.
+https://imgur.com/Xo233jv
+-->
 
 ## Notes
 
@@ -46,6 +56,7 @@ GIF created with ...
 - Trying to understand how the API calls and the reference as each JSON is different than others. 
 - Limited by 5 API calls a minute made it hard to understand how the API calls work as the beginning, the function was calling it multiple times. 
 - Finding an API to use for the project as the first one was to do a Salary API from the BLS. 
+
 
 ## License
 
