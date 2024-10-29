@@ -99,3 +99,18 @@ select {
   text-align: center;
   margin-bottom: 30px;
 }
+nav {
+  position: fixed; 
+  top: 0; 
+  right: 0; 
+}
+
+.home-link 
+{
+  border:1px dotted white;
+  background:#1d1f1d;
+  width:75px;
+  border-radius: 8px;
+  padding: 5px;
+  margin: 5px;
+}
