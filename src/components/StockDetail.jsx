@@ -37,7 +37,7 @@ const StockDetail = () => {
             }
                 const blob = await response.blob();
                 const url = URL.createObjectURL(blob);
-                setLogo(url);x
+                setLogo(url);
             } catch (error) {
                 console.error(error);
             }
@@ -51,8 +51,9 @@ const StockDetail = () => {
                 <>
                     <h1>{fullDetail.info.name}</h1>
                     <img src={`${logo}`}
-                        alt={`Small Icon for ${params.ticker}`} className="images" 
-                        style={{ width: '50px', height: '50px' }}/>
+                        alt={`Small Icon for ${params.ticker}`}
+                        className="images" 
+                        />
                     <div>{fullDetail.info.description}</div>
                     <br></br>
 

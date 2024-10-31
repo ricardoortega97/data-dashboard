@@ -2,7 +2,7 @@
 
 Submitted by: **Ricardo Ortega-Pacheco**
 
-This web app: **Data Dashboard that displays current active stockes in the market using Polygon.io API as the request.**
+This web app: **Data Dashboard that displays current active stocks in the market using Polygon.io API as the request. There are three APIs that are being used in this project: Aggregates, Tickers, Tickers Details v3. When clicking on a Ticker item, it will route the user to the Ticker details with a chart that uses Recharts.**
 
 Time spent: **16** hours spent in total
 
@@ -19,28 +19,28 @@ The following **required** functionality is completed:
 
 New Functions
 
-- [ ] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
-- [ ] **Clicking on an item in the list view displays more details about it**
-- [ ] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
-- [ ] **Clicking on an item has a direct, unique link to that item's detail view page**
+- [x] **The app includes at least one unique chart developed using the fetched data that tell an interesting story**
+- [x] **Clicking on an item in the list view displays more details about it**
+- [x] To ensure an accurate grade, your sidebar **must** be viewable when showing the details view in your recording.
+- [x] **Clicking on an item has a direct, unique link to that item's detail view page**
 - [x] To ensure an accurate grade, the URL/address bar of your web browser **must** be viewable in your recording. 
 
 The following **optional** features are implemented:
 
-- [ ] Multiple filters can be applied simultaneously
+- [x] Multiple filters can be applied simultaneously
 - [x] Filters use different input types such as a text input, a selection, or a slider
-- [ ] The user can enter specific bounds for filter values
+- [x] The user can enter specific bounds for filter values
 
 The following **additional** features are implemented:
 
-* [ ] List anything else that you added to improve the site's functionality!
+* [x] Implemented an Authorization header to request the image logo. 
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
 <img src='https://imgur.com/onc3anN.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-<img src='https://imgur.com/Xo233jv.gif' title='Video Walkthrough 2' width='' alt='Video Walkthrough 2' />
+<img src='https://imgur.com/j1w6qOG.gif' title='Video Walkthrough 2' width='' alt='Video Walkthrough 2' />
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ...  
 <!-- Recommended tools:
@@ -55,7 +55,8 @@ https://imgur.com/Xo233jv
 - Setting the api data to display in a table list while moving the information to a component.
 - Trying to understand how the API calls and the reference as each JSON is different than others. 
 - Limited by 5 API calls a minute made it hard to understand how the API calls work as the beginning, the function was calling it multiple times. 
-- Finding an API to use for the project as the first one was to do a Salary API from the BLS. 
+- Finding an API to use for the project as the first one was to do a Salary API from the BLS.
+- Using three different API data endpoints as each were unique on the JSON that was being provided. 
 
 
 ## License

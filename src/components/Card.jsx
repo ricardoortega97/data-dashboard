@@ -4,15 +4,15 @@ const Card = () => {
         <>
             <Event 
             top="Stocks"
-            bottom="Buy low, sell high"
+            bottom="High risk, high reward"
             /> 
             <Event 
                 top="Crypto"
-                bottom="Buy high, sell low"
+                bottom="Substantial Gains"
             />
             <Event 
                 top="Bonds"
-                bottom="Buy high, sell high" 
+                bottom="Steady Growth" 
             />
         </>
     )
