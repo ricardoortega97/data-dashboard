@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import StockChart from "./StockChart";
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
 const StockDetail = () => {
@@ -7,6 +8,7 @@ const StockDetail = () => {
     let params = useParams();
 
     const [fullDetail, setFullDetail] = useState(null);
+    const [logo, setLogo] = useState(null);
 
     useEffect(() => {
         const getStockDetail = async () => {
@@ -16,25 +18,48 @@ const StockDetail = () => {
         
             console.log('Stock Detail:', detailsJson.results);
             setFullDetail({"info":detailsJson.results});
-        };
-        getStockDetail().catch(console.error);
 
+            if (detailsJson.results?.branding?.logo_url) {
+                await getLogo(detailsJson.results.branding.logo_url);
+            }
+        };
+
+        const getLogo = async (logo) => {
+            try {
+                const response = await fetch(logo, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${API_KEY}`,
+                    }
+                });
+            if (!response.ok) {
+                throw new Error('Failed to get Logo');
+            }
+                const blob = await response.blob();
+                const url = URL.createObjectURL(blob);
+                setLogo(url);x
+            } catch (error) {
+                console.error(error);
+            }
+        }
+        getStockDetail().catch(console.error);  
     }, [params.ticker]);
 
     return (
-        <div>
+        <div className="ticker-table">
             {fullDetail && (
                 <>
                     <h1>{fullDetail.info.name}</h1>
-                    <img src={`${fullDetail.info.branding.logo_url}`}
-                        alt={`Small Icon for ${params.ticker}`} className="images" />
+                    <img src={`${logo}`}
+                        alt={`Small Icon for ${params.ticker}`} className="images" 
+                        style={{ width: '50px', height: '50px' }}/>
                     <div>{fullDetail.info.description}</div>
                     <br></br>
 
                     <h2>Market Details</h2> 
 
-                    <table>
-                        <tbody> 
+                    <table className="inner-table">
+                        <tbody > 
                             <tr>
                                 <th>Launch Date </th>
                                 <td>{fullDetail.info.list_date}</td>
@@ -77,6 +102,7 @@ const StockDetail = () => {
                             </tr>
                         </tbody>
                     </table>
+                    <StockChart ticker={params.ticker} />
                 </>
                 
 

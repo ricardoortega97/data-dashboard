@@ -2,7 +2,7 @@ import StockDetail from "../components/StockDetail"
 
 const DetailView = () => {
     return (
-        <div>
+        <div className="margin" >
             <StockDetail />
         </div>
     );

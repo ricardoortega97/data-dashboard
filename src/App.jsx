@@ -1,6 +1,7 @@
 import { useRoutes } from 'react-router-dom';
 import Home from './routes/Home';
 import DetailView from './routes/DetailView';
+import NavBar from './components/NavBar';
 import './App.css';
 
 function App() {
@@ -19,9 +20,9 @@ function App() {
 
 
     return (
-        <div>
+        <>
             {element}
-        </div>
+        </>
     );
 
 }

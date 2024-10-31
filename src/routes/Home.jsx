@@ -2,7 +2,6 @@ import NavBar from '../components/NavBar';
 import Card from '../components/Card';
 import StockInfo from '../components/StockInfo';
 import { useEffect, useState } from 'react';
-import DetailView from './DetailView';
 
 const API_KEY = import.meta.env.VITE_APP_API_KEY;
 
@@ -46,13 +45,6 @@ const Home = () => {
 
     return (   
         <div className="app">
-
-            <div className="sidebar">
-                <div className="header">
-                    <h1>Stock Info</h1>
-                </div>
-                <NavBar />
-            </div>
             <div className="app-page">
                 <div className="app-row">
                     <Card />
